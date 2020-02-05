@@ -46,14 +46,14 @@ public class HelloProcessing extends PApplet
 
 	public void draw() {
 		background(255,0,0);
-		ellipse(250,350,400,200);
-		fill(100,200,0);
-		triangle(300, 250, 450, 260, 260, 350);
-		fill(0,255,255);
+		ellipse(250,350,400,200); //black circle
+		fill(0,255,255);// aqua
+		triangle(100, 50, 150, 2000, 2000, 4000);
+		fill(255,255,0); // yellow
 		noStroke();
-		ellipse(100,200,100,50);
+		ellipse(200,500,400,200); //yellow circle
 		fill(127);
-		ellipse(50,100,400,200);
+		ellipse(50,100,400,200); // gray circle
 		fill(0);
 
 	}
@@ -62,7 +62,7 @@ public class HelloProcessing extends PApplet
 
 	int x = 0; // 4 bytes
 	
-	public void draw()
+	/*public void draw()
 	{	
 		
 		background(0);
@@ -71,4 +71,5 @@ public class HelloProcessing extends PApplet
 		ellipse(x, mouseY, 50, 50);		
 		x ++;
 	}
+	*/
 }
