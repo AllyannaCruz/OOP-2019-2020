@@ -3,13 +3,9 @@ package ie.tudublin;
 public class Main
 {
 
-    public void bugZap()
+    public void helloProcessing()
 	{
 		String[] a = {"MAIN"};
-<<<<<<< HEAD
-        processing.core.PApplet.runSketch( a, new BugZap());
-	}
-=======
         processing.core.PApplet.runSketch( a, new HelloProcessing());
     }
 
@@ -18,7 +14,6 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Loops());
     }
->>>>>>> 8f0bb789dfdaf47f8a4e396dbaa9d71e7a1127d7
     
     public void bugZap()
 	{
@@ -40,10 +35,6 @@ public class Main
         // This is not polymorphism
         Cat topcat = new Cat("Topcat");
 
-<<<<<<< HEAD
-        Main main = new Main();
-		main.bugZap();
-=======
         // This is polymorphism!
         Animal mino = new Cat("Mino");
         // A vitual method!
@@ -59,7 +50,6 @@ public class Main
 
         Animal a = new Cat("a");
         Animal b = new Cat("b");
->>>>>>> 8f0bb789dfdaf47f8a4e396dbaa9d71e7a1127d7
         
         System.out.println(a);
         System.out.println(b);

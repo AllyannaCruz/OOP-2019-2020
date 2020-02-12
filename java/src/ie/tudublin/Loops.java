@@ -28,10 +28,31 @@ public class Loops extends PApplet
 	{	
 		background(0);		
 		stroke(255);
-		line(10, 10, 100, 10);
-		line(10, 20, 100, 20);
-		line(10, 30, 100, 30);
-		line(10, 40, 100, 40);
+		//line(10, 10, 350, 150);
+		//line(10, 20, 350, 160);
+		//line(10, 30, 350, 170);
+		//line(10, 40, 100, 40);
+
+			//same as doing above code
+			for(y = 2=; y <= 40 ; y+= 10)
+			{
+				line(200, yy, 100, yy);
+						
+			}
+			
+			int yy = 10;
+			
+			int i = 0;
+			while(i < 10)
+			{
+				i ++;
+			}
+			
+			for(int j = 0; j < 100 ; j++)
+			{
+				
+			}
+		}
 
 		for(int y = 10 ; y <= 40 ; y += 10)
 		{
