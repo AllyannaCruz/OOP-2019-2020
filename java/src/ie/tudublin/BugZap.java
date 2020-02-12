@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package ie.tudublin;
 
 import processing.core.PApplet;
@@ -73,7 +72,6 @@ public class BugZap extends PApplet
 
     
 }
-=======
 package ie.tudublin;
 
 import processing.core.PApplet;
@@ -216,4 +214,3 @@ public class BugZap extends PApplet
 		moveBug();
 	}
 }
->>>>>>> 8f0bb789dfdaf47f8a4e396dbaa9d71e7a1127d7
