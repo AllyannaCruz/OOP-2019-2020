@@ -6,25 +6,9 @@ public class Main
     public void bugZap()
 	{
 		String[] a = {"MAIN"};
-<<<<<<< HEAD
         processing.core.PApplet.runSketch( a, new BugZap());
 	}
-=======
-        processing.core.PApplet.runSketch( a, new HelloProcessing());
-    }
-
-    public void loops()
-    {
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new Loops());
-    }
->>>>>>> 8f0bb789dfdaf47f8a4e396dbaa9d71e7a1127d7
     
-    public void bugZap()
-	{
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new BugZap());
-    }
     
     public void airSeaBattle()
 	{
@@ -40,26 +24,8 @@ public class Main
         // This is not polymorphism
         Cat topcat = new Cat("Topcat");
 
-<<<<<<< HEAD
         Main main = new Main();
 		main.bugZap();
-=======
-        // This is polymorphism!
-        Animal mino = new Cat("Mino");
-        // A vitual method!
-        // Dynamic binding
-        mino.speak();
-        // This wont compile!!
-        //System.out.println(mino.getNumLives());
-        // This is an example of a cast
-        System.out.println(((Cat)mino).getNumLives());
-
-        mino = new Dog("Misty");  // This will compile!
-        //topcat = new Dog("Tara"); // This wont compile!
-
-        Animal a = new Cat("a");
-        Animal b = new Cat("b");
->>>>>>> 8f0bb789dfdaf47f8a4e396dbaa9d71e7a1127d7
         
         System.out.println(a);
         System.out.println(b);
@@ -79,6 +45,6 @@ public class Main
     public static void main(String[] arg)
     {
         Main main = new Main();
-		main.loops();        
+		main.helloArrays();        
     }
 }
