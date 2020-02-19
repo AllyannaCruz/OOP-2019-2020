@@ -28,6 +28,8 @@ public class HelloProcessing extends PApplet
 
 	int x = 0; // 4 bytes
 	
+	/*
+
 	public void draw()
 	{	
 		
@@ -37,4 +39,6 @@ public class HelloProcessing extends PApplet
 		ellipse(x, mouseY, 50, 50);		
 		x ++;
 	}
+	
+	*/
 }
