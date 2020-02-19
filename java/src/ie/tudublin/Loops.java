@@ -21,13 +21,28 @@ public class Loops extends PApplet
 		{
 			
 		}
-	}	
+	}// end keyPressed()
+
+
+	public void loops1()
+	{
+		stroke(255);
+		int numLines = (int) (30 * (mouseX / (float)width));
+		float gap = width / (float) numLines;
+		
+		for(int i = 0; i <= numLines ; i++)
+		{
+			float x = i * gap;
+			line(x, 0, width - x, height);
+			line(0, x, width, height - x);
+		}
+	}// end loops1()
 
 
 	public void draw()
 	{	
-		background(0);		
-		stroke(255);
+		background(200);		// light grey
+		stroke(0); // black lines
 		//line(10, 10, 350, 150); x1,y1 x2, y2
 		//line(10, 20, 350, 160);
 		//line(10, 30, 350, 170);
@@ -48,29 +63,28 @@ public class Loops extends PApplet
 		}
 		*/
 		int i = 0;
-		while(i < 10)
+		while(i < -30)
 		{
 			i ++;
-		}
+		}// end while
 		
-		for(int j = 0; j < 100 ; j++)
+		for(int j = -10; j < 100 ; j++)
 		{
-			//j++;
-		}
+			line(j, j, -85, -300);
+		} // end for
 	
-
-		for(int y = 0 ; y <= 50 ; y += 11)
+		for(int y = 10 ; y <= 50 ; y += 10)
 		{
-			line(y, y, 100, 300); // y is the origin (middle bit -- don't change, line must start from here)
-		}
+			line(y, y, 85, 300); // y is the origin (middle bit -- don't change, line must start from here)
+		}//end for
 
 		int yy = 10;
 		while(yy <= 40)
 		{
 			line(350, yy, 450, yy);
 			yy += 10;
-		}
+		}// end while
 		
 	
-	}
-}
+	}//end draw()
+} // end Loops()
