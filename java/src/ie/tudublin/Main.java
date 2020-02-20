@@ -1,10 +1,10 @@
 package ie.tudublin;
 
+import java.util.Scanner;  // Import the Scanner class 
+
 public class Main
 {
 
-<<<<<<< HEAD
-=======
     public void helloArrays()
 	{
 		String[] a = {"MAIN"};
@@ -23,13 +23,11 @@ public class Main
         processing.core.PApplet.runSketch( a, new Loops());
     }
     
->>>>>>> 3abc8db5bc26035d1738ad470a5d37a4dc04ebf7
     public void bugZap()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new BugZap());
-	}
-    
+    }
     
     public void airSeaBattle()
 	{
@@ -45,8 +43,21 @@ public class Main
         // This is not polymorphism
         Cat topcat = new Cat("Topcat");
 
-        Main main = new Main();
-		main.bugZap();
+        // This is polymorphism!
+        Animal mino = new Cat("Mino");
+        // A vitual method!
+        // Dynamic binding
+        mino.speak();
+        // This wont compile!!
+        //System.out.println(mino.getNumLives());
+        // This is an example of a cast
+        System.out.println(((Cat)mino).getNumLives());
+
+        mino = new Dog("Misty");  // This will compile!
+        //topcat = new Dog("Tara"); // This wont compile!
+
+        Animal a = new Cat("a");
+        Animal b = new Cat("b");
         
         System.out.println(a);
         System.out.println(b);
@@ -63,9 +74,23 @@ public class Main
 
     }
     
-    public static void main(String[] arg)
+    public static void main(String[] args)
     {
         Main main = new Main();
-		main.helloArrays();        
+        main.helloArrays();       
+        
+        //PitchSpeller ps = new PitchSpeller();
+        //Scanner myObj = new Scanner(System.in);  // Create a Scanner object -- for inputting
+
+        //System.out.println("Type in frequency");
+
+        //String freq = myObj.nextLine(); // Read in input
+        
+		//System.out.println(ps.spell(330));
+		//System.out.println(ps.spell(420));
+		//System.out.println(ps.spell(1980));
     }
+
+
+    
 }
