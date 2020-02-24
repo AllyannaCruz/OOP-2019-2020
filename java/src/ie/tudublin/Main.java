@@ -3,40 +3,35 @@ package ie.tudublin;
 public class Main
 {
 
-<<<<<<< HEAD
-=======
-    public void helloArrays()
-	{
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new ArraysExample());
-    }
-
-    public void helloProcessing()
-	{
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new HelloProcessing());
-    }
-
-    public void loops()
-    {
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new Loops());
-    }
-    
->>>>>>> 3abc8db5bc26035d1738ad470a5d37a4dc04ebf7
     public void bugZap()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new BugZap());
 	}
     
-    
+   /* 
+    public void sound1()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Sound1());
+    }
+    */
+
     public void airSeaBattle()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new AirSeaBattle());
     }
-    
+
+    /*
+    public void soundMandala()
+    {
+        String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new SoundMandala());
+    }
+    */
+
+    /*
     public void dogsCats()
     {
         // Polymorphism means
@@ -62,10 +57,10 @@ public class Main
         // a & b are object references
 
     }
-    
+    */
     public static void main(String[] arg)
     {
-        Main main = new Main();
-		main.helloArrays();        
+        //Main main = new Main();
+		//main.sound1();        
     }
 }
