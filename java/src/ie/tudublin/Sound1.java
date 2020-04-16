@@ -10,6 +10,13 @@ public class Sound1 extends PApplet
 	AudioInput ai;
 	AudioSample as;
 
+	FFT fft;
+
+	int frameSize = 1024;
+	int sampleRate = 44100;
+
+
+
 	public void settings()
 	{
 		size(1024, 500);
@@ -25,6 +32,12 @@ public class Sound1 extends PApplet
 		colorMode(HSB);
 		circy = height / 2;
 		lerpedcircley = circy;
+<<<<<<< HEAD
+=======
+
+		fft = new FFT(frameSize, sampleRate); 
+
+>>>>>>> 0017d28d50ccce2816eb12a9c15f44a68cc38fe6
 	}
 
 	float offs = 0;
@@ -39,6 +52,8 @@ public class Sound1 extends PApplet
 		stroke(255);
 		float cy = height / 2;
 		float sum = 0;
+<<<<<<< HEAD
+=======
 		for(int i = 0 ; i < ai.bufferSize() ; i ++)
 		{
 			stroke(
@@ -49,6 +64,33 @@ public class Sound1 extends PApplet
 			//line(i, cy, i, cy + ai.left.get(i) * cy);
 			sum += abs(ai.left.get(i));
 		}
+		float average = sum / ai.bufferSize();
+
+		float w  = average * 1000;
+		lerpedw = lerp(lerpedw, w, 0.1f);
+		noStroke();
+		fill(
+			map(average, 0, 1, 0, 255)
+			, 255
+			, 255
+		);
+		//ellipse(400 , cy,w, w);
+		//ellipse(600 , cy,lerpedw, lerpedw);
+
+
+		
+>>>>>>> 0017d28d50ccce2816eb12a9c15f44a68cc38fe6
+		for(int i = 0 ; i < ai.bufferSize() ; i ++)
+		{
+			stroke(
+				map(i, 0, ai.bufferSize(), 0, 255)
+				, 255
+				, 255
+			);
+			//line(i, cy, i, cy + ai.left.get(i) * cy);
+			sum += abs(ai.left.get(i));
+		}
+<<<<<<< HEAD
 		float average = sum / ai.bufferSize();
 
 		float w  = average * 1000;
@@ -79,6 +121,22 @@ public class Sound1 extends PApplet
 		lerpedcircley = lerp(lerpedcircley, circy, 0.1f);
 		ellipse(100, circy, 50, 50);
 		ellipse(200, lerpedcircley, 50, 50);
+=======
+		
+		circy += random(-20, 20);
+		lerpedcircley = lerp(lerpedcircley, circy, 0.1f);
+		//ellipse(100, circy, 50, 50);
+		//ellipse(200, lerpedcircley, 50, 50);
+
+		fft.window(FFT.HAMMING);
+		fft.forward(ai.left);
+
+		stroke(255);
+		for(int i = 0 ; i < fft.specSize() ; i ++)
+		{
+			line(i, 0, i, fft.getBand(i) * 100);
+		}
+>>>>>>> 0017d28d50ccce2816eb12a9c15f44a68cc38fe6
 		
 	}
 }
