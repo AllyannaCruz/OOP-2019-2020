@@ -1,11 +1,8 @@
 package ie.tudublin;
 
-
 public class Main
 {
 
-<<<<<<< HEAD
-=======
     public void soundSynthesis()
 	{
 		String[] a = {"MAIN"};
@@ -34,13 +31,11 @@ public class Main
         processing.core.PApplet.runSketch( a, new Loops());
     }
     
->>>>>>> 0017d28d50ccce2816eb12a9c15f44a68cc38fe6
     public void bugZap()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new BugZap());
-	}
-    
+    }
     
     public void sound1()
 	{
@@ -92,8 +87,21 @@ public class Main
         // This is not polymorphism
         Cat topcat = new Cat("Topcat");
 
-        Main main = new Main();
-		main.bugZap();
+        // This is polymorphism!
+        Animal mino = new Cat("Mino");
+        // A vitual method!
+        // Dynamic binding
+        mino.speak();
+        // This wont compile!!
+        //System.out.println(mino.getNumLives());
+        // This is an example of a cast
+        System.out.println(((Cat)mino).getNumLives());
+
+        mino = new Dog("Misty");  // This will compile!
+        //topcat = new Dog("Tara"); // This wont compile!
+
+        Animal a = new Cat("a");
+        Animal b = new Cat("b");
         
         System.out.println(a);
         System.out.println(b);
