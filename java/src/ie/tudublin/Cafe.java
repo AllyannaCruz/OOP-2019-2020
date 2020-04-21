@@ -123,4 +123,4 @@ public class Cafe extends PApplet
         loadData();
         printProducts();
     }
-}
+} //end class

@@ -75,4 +75,10 @@ public class StarMap extends PApplet
         drawStars();
     }
 
+    public void mousePressed() 
+    {
+        stroke(255);
+        line(pmouseX, pmouseY, mouseX, mouseY);
+    }
+
 }
